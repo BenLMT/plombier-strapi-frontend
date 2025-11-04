@@ -31,8 +31,8 @@ export async function fetchContentType(
         // Activer les content source maps en mode preview pour Live Preview
         "strapi-encode-source-maps": isDraftMode ? "true" : "false",
       },
-      // Désactiver le cache en mode preview
-      cache: isDraftMode ? "no-store" : "force-cache",
+      // Désactiver le cache en mode preview, revalider toutes les 60 secondes en production
+      next: isDraftMode ? { revalidate: 0 } : { revalidate: 60 },
     });
     
     if (!response.ok) {
@@ -77,7 +77,7 @@ export async function fetchDocument(
         Authorization: `Bearer ${process.env.STRAPI_API_TOKEN}`,
         "strapi-encode-source-maps": isDraftMode ? "true" : "false",
       },
-      cache: isDraftMode ? "no-store" : "force-cache",
+      next: isDraftMode ? { revalidate: 0 } : { revalidate: 60 },
     });
     
     if (!response.ok) {
