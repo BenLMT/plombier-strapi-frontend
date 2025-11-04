@@ -12,12 +12,31 @@ export function parseMarkdownToHTML(markdown: string): string {
   let html = markdown.replace(/\\n/g, '\n');
 
   // 1. Gérer les images Strapi
-  // Format: ![alt](http://localhost:1337/uploads/image.png)
+  // Supporte les URLs absolues (http/https) et relatives pointant vers /uploads/
   html = html.replace(
-    /!\[([^\]]*)\]\((http:\/\/localhost:1337\/uploads\/[^)]+)\)/g,
+    /!\[([^\]]*)\]\(([^)]+)\)/g,
     (match, alt, url) => {
-      const filename = url.split('/').pop();
-      return `<img src="${baseURL}/uploads/${filename}" alt="${alt}" class="rounded-lg shadow-md my-6 w-full max-w-2xl mx-auto" />`;
+      const trimmedUrl = url.trim();
+
+      // Laisser intact si ce n'est pas une ressource Strapi
+      if (!trimmedUrl.includes('/uploads/')) {
+        return match;
+      }
+
+      let finalPath = trimmedUrl;
+
+      try {
+        // Si URL absolue, extraire le pathname
+        const parsed = new URL(trimmedUrl);
+        finalPath = parsed.pathname;
+      } catch (error) {
+        // Si URL relative, s'assurer qu'elle commence par /
+        if (!finalPath.startsWith('/')) {
+          finalPath = `/${finalPath}`;
+        }
+      }
+
+      return `<img src="${baseURL}${finalPath}" alt="${alt}" class="rounded-lg shadow-md my-6 w-full max-w-2xl mx-auto" />`;
     }
   );
 
