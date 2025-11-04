@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-neutral-900;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+  }
+  
+  .pulse-urgent {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .floating-cta {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .service-card {
+    transition: all 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .choice-card {
+    transition: all 0.3s ease;
+  }
+  
+  input[type="radio"]:checked + .choice-card {
+    @apply border-blue-500 bg-blue-50;
+  }
+  
+  /* Styles pour le contenu markdown des articles */
+  .article-content h1,
+  .article-content h2,
+  .article-content h3,
+  .article-content h4 {
+    scroll-margin-top: 100px; /* Pour les ancres avec header fixe */
+  }
+  
+  .article-content h2 {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .article-content h2:first-child {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+  
+  .article-content ul,
+  .article-content ol {
+    margin-left: 1.5rem;
+  }
+  
+  .article-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.75;
+  }
+  
+  .article-content p {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+  }
+  
+  .article-content img {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .article-content strong {
+    font-weight: 700;
+  }
+  
+  .article-content a {
+    text-decoration: underline;
+    transition: color 0.2s ease;
+  }
+  
+  .article-content a:hover {
+    color: #1e40af;
+  }
+  
+  .article-content table {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .article-content blockquote {
+    border-left: 4px solid #3b82f6;
+    padding-left: 1.5rem;
+    font-style: italic;
+    color: #4b5563;
+  }
+  
+  .article-content code {
+    font-size: 0.875em;
+  }
+  
+  .article-content pre {
+    overflow-x: auto;
+    border-radius: 0.5rem;
+  }
+  
+  /* Styles pour le contenu SEO (home-dynamic) */
+  .seo-content {
+    @apply article-content;
+  }
+  
+  /* Animations pour le CTA mobile sticky */
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Support pour line-clamp (truncate text) */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Smooth scroll pour les ancres */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Padding bottom pour éviter que le contenu soit caché par le sticky mobile */
+  @media (max-width: 1024px) {
+    body {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+  }
+}
