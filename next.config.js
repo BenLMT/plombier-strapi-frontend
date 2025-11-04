@@ -1,12 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['localhost', 'replicate.delivery'],
+    domains: ['localhost', 'replicate.delivery', 'plombier-strapi.coolify.benitax.ovh'],
     remotePatterns: [
       {
         protocol: 'http',
         hostname: 'localhost',
         port: '1337',
+        pathname: '/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'plombier-strapi.coolify.benitax.ovh',
         pathname: '/uploads/**',
       },
     ],
