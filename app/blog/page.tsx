@@ -1,8 +1,8 @@
 import { fetchContentType } from "@/lib/strapi";
 import Link from "next/link";
 import Image from "next/image";
-import BlogHeader from "@/components/BlogHeader";
-import BlogFooter from "@/components/BlogFooter";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Calendar, User, Tag } from "lucide-react";
 
 export const metadata = {
@@ -25,7 +25,7 @@ export default async function BlogPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <BlogHeader />
+      <Header />
 
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
@@ -133,7 +133,7 @@ export default async function BlogPage() {
         )}
       </main>
 
-      <BlogFooter />
+      <Footer />
     </div>
   );
 }
