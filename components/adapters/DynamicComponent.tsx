@@ -7,7 +7,7 @@ import HeroWithFormAdapter_v2 from "./hero/HeroWithFormAdapter_v2";
 import Process1 from "./process/Process1";
 import ServicesShowcaseAdapter4 from "./showcase/ServicesShowcaseAdapter4";
 import TestimonialsAdapter from "./TestimonialsAdapter";
-import CTAUrgenceAdapter from "./CTAUrgenceAdapter";
+import CTAUrgenceAdapter1 from "./CTA-urgence/CTAUrgenceAdapter1";
 import ArrondissementsAdapter from "./ArrondissementsAdapter";
 import FAQAdapter from "./FAQAdapter";
 import SeoContentAdapter from "./SeoContentAdapter";
@@ -41,7 +41,7 @@ export default function DynamicComponent({ component }: DynamicComponentProps) {
       return <TestimonialsAdapter data={component} />;
     
     case "sections.cta-urgence":
-      return <CTAUrgenceAdapter data={component} />;
+      return <CTAUrgenceAdapter1 data={component} />;
     
     case "sections.arrondissements":
       return <ArrondissementsAdapter data={component} />;

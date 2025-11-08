@@ -10,7 +10,7 @@ import HeroWithFormAdapter from "@/components/adapters/hero/HeroWithFormAdapter"
 import ProcessAdapter from "@/components/adapters/process/ProcessAdapter";
 import ServicesShowcaseAdapter from "@/components/adapters/showcase/ServicesShowcaseAdapter";
 import TestimonialsAdapter from "@/components/adapters/TestimonialsAdapter";
-import CTAUrgenceAdapter from "@/components/adapters/CTAUrgenceAdapter";
+import CTAUrgenceAdapter from "@/components/adapters/CTA-urgence/CTAUrgenceAdapter";
 import ArrondissementsAdapter from "@/components/adapters/ArrondissementsAdapter";
 import FAQAdapter from "@/components/adapters/FAQAdapter";
 import SeoContentAdapter from "@/components/adapters/SeoContentAdapter";
