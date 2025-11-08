@@ -8,7 +8,7 @@ import StructuredData from "@/components/StructuredData";
 import HeroAdapter from "@/components/adapters/hero/HeroAdapter";
 import HeroWithFormAdapter from "@/components/adapters/hero/HeroWithFormAdapter";
 import ProcessAdapter from "@/components/adapters/process/ProcessAdapter";
-import ServicesShowcaseAdapter from "@/components/adapters/ServicesShowcaseAdapter";
+import ServicesShowcaseAdapter from "@/components/adapters/showcase/ServicesShowcaseAdapter";
 import TestimonialsAdapter from "@/components/adapters/TestimonialsAdapter";
 import CTAUrgenceAdapter from "@/components/adapters/CTAUrgenceAdapter";
 import ArrondissementsAdapter from "@/components/adapters/ArrondissementsAdapter";

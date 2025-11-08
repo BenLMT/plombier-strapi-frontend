@@ -5,7 +5,7 @@ import type { DynamicSection } from "@/lib/strapi-types";
 import HeroAdapter from "./hero/HeroAdapter";
 import HeroWithFormAdapter_v2 from "./hero/HeroWithFormAdapter_v2";
 import Process1 from "./process/Process1";
-import ServicesShowcaseAdapter from "./ServicesShowcaseAdapter";
+import ServicesShowcaseAdapter4 from "./showcase/ServicesShowcaseAdapter4";
 import TestimonialsAdapter from "./TestimonialsAdapter";
 import CTAUrgenceAdapter from "./CTAUrgenceAdapter";
 import ArrondissementsAdapter from "./ArrondissementsAdapter";
@@ -35,7 +35,7 @@ export default function DynamicComponent({ component }: DynamicComponentProps) {
       return <Process1 data={component} />;
     
     case "sections.services-showcase":
-      return <ServicesShowcaseAdapter data={component} />;
+      return <ServicesShowcaseAdapter4 data={component} />;
     
     case "sections.testimonials":
       return <TestimonialsAdapter data={component} />;
