@@ -192,6 +192,25 @@ export interface HomePage {
   publishedAt: string;
 }
 
+export interface HomeSingle {
+  id: number;
+  documentId: string;
+  seo?: any;
+  hero?: HeroSection | null;
+  heroWithForm?: HeroWithFormSection | null;
+  process?: ProcessSection | null;
+  servicesShowcase?: ServicesShowcaseSection | null;
+  testimonials?: TestimonialsSection | null;
+  ctaUrgence?: CtaUrgenceSection | null;
+  arrondissements?: ArrondissementsSection | null;
+  faq?: FaqSection | null;
+  seoContent?: SeoContentSection | null;
+  myTest?: MyTestSection | null;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+}
+
 export interface StrapiResponse<T> {
   data: T;
   meta: any;

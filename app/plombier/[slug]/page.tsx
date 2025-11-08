@@ -1,14 +1,14 @@
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import ProcessSection from "@/components/ProcessSection";
-import ServicesShowcaseSection from "@/components/ServicesShowcaseSection";
-import TestimonialsModernSection from "@/components/TestimonialsModernSection";
-import CTAUrgenceBox from "@/components/CTAUrgenceBox";
-import ArrondissementsSection from "@/components/ArrondissementsSection";
-import FAQSection from "@/components/FAQSection";
+import HeroSection from "@/components/plombier/HeroSection";
+import ProcessSection from "@/components/plombier/ProcessSection";
+import ServicesShowcaseSection from "@/components/plombier/ServicesShowcaseSection";
+import TestimonialsModernSection from "@/components/plombier/TestimonialsModernSection";
+import CTAUrgenceBox from "@/components/plombier/CTAUrgenceBox";
+import ArrondissementsSection from "@/components/plombier/ArrondissementsSection";
+import FAQSection from "@/components/plombier/FAQSection";
 import Footer from "@/components/Footer";
-import FloatingCTA from "@/components/FloatingCTA";
+import FloatingCTA from "@/components/plombier/FloatingCTA";
 import StructuredData from "@/components/StructuredData";
 
 // Générer les 20 arrondissements de Paris

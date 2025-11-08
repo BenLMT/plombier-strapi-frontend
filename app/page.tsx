@@ -3,9 +3,9 @@ import type { StrapiResponse, HomePage } from "@/lib/strapi-types";
 import { getHomePagePopulate } from "@/lib/strapi-populate";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingCTA from "@/components/FloatingCTA";
+import FloatingCTA from "@/components/plombier/FloatingCTA";
 import StructuredData from "@/components/StructuredData";
-import DynamicZone from "@/components/DynamicZone";
+import DynamicZone from "@/components/adapters/DynamicZone";
 
 // Pas de cache pour cette page
 export const dynamic = 'force-dynamic';

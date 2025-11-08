@@ -7,7 +7,11 @@ const baseURL = process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337
 /**
  * Convertit le Markdown en HTML avec support des images Strapi
  */
-export function parseMarkdownToHTML(markdown: string): string {
+export function parseMarkdownToHTML(markdown?: string | null): string {
+  if (!markdown) {
+    return "";
+  }
+
   // Convertir les \n littéraux en vrais retours à la ligne
   let html = markdown.replace(/\\n/g, '\n');
 

@@ -36,7 +36,7 @@ export default function ServiceAdapter({ service, variant = "card" }: ServiceAda
   // Variant "featured" - Grande carte mise en avant
   if (variant === "featured") {
     return (
-      <Link href={`/service/${service.slug}`} className="group block">
+      <Link href={`/services/${service.slug}`} className="group block">
         <article className="bg-gradient-to-br from-primary to-primary-800 text-white rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1">
           <div className="grid md:grid-cols-2">
             {/* Image */}
@@ -100,7 +100,7 @@ export default function ServiceAdapter({ service, variant = "card" }: ServiceAda
   // Variant "list" - Vue en liste compacte
   if (variant === "list") {
     return (
-      <Link href={`/service/${service.slug}`} className="group block">
+      <Link href={`/services/${service.slug}`} className="group block">
         <article className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-primary">
           <div className="flex items-start gap-6">
             {/* Image */}
@@ -172,7 +172,7 @@ export default function ServiceAdapter({ service, variant = "card" }: ServiceAda
 
   // Variant "card" (default) - Carte classique
   return (
-    <Link href={`/service/${service.slug}`} className="group block h-full">
+    <Link href={`/services/${service.slug}`} className="group block h-full">
       <article className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-primary h-full flex flex-col">
         {/* Image */}
         {imageUrl && (

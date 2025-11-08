@@ -72,6 +72,54 @@ export function getHomePagePopulate() {
   };
 }
 
+export function getHomeSinglePopulate() {
+  return {
+    populate: {
+      hero: {
+        populate: ['backgroundImage', 'features'],
+      },
+      heroWithForm: {
+        populate: ['backgroundImage', 'features'],
+      },
+      process: {
+        populate: ['steps'],
+      },
+      servicesShowcase: {
+        populate: {
+          services: {
+            populate: ['image'],
+          },
+        },
+      },
+      testimonials: {
+        populate: {
+          testimonials: {
+            populate: ['avatar'],
+          },
+        },
+      },
+      ctaUrgence: {
+        populate: '*',
+      },
+      arrondissements: {
+        populate: '*',
+      },
+      faq: {
+        populate: ['questions'],
+      },
+      seoContent: {
+        populate: '*',
+      },
+      myTest: {
+        populate: '*',
+      },
+      seo: {
+        populate: '*',
+      },
+    },
+  };
+}
+
 /**
  * Alternative : Populate "deep" pour tout récupérer automatiquement
  * ⚠️ Attention : peut être plus lent et récupérer trop de données
