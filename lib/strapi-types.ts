@@ -153,13 +153,20 @@ export interface FaqSection {
   questions: FaqItem[];
 }
 
+export interface ContentSection {
+  id: number;
+  title?: string;
+  content: string;
+  alignment?: 'left' | 'right';
+  images?: any; // Strapi media (peut être data.attributes ou direct)
+}
+
 export interface SeoContentSection {
   __component: 'sections.seo-content';
   id: number;
   title?: string;
-  content: string;
-  showTableOfContents?: boolean;
   backgroundColor?: 'white' | 'gray' | 'primary-light';
+  contentSections?: ContentSection[];
 }
 
 export interface MyTestSection {

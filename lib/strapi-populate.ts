@@ -54,7 +54,11 @@ export function getHomePagePopulate() {
             populate: ['steps']
           },
           'sections.seo-content': {
-            populate: '*'
+            populate: {
+              contentSections: {
+                populate: ['images']
+              }
+            }
           },
           'sections.my-test': {
             populate: '*'
@@ -108,7 +112,11 @@ export function getHomeSinglePopulate() {
         populate: ['questions'],
       },
       seoContent: {
-        populate: '*',
+        populate: {
+          contentSections: {
+            populate: ['images']
+          }
+        }
       },
       myTest: {
         populate: '*',
